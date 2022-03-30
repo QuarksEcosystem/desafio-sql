@@ -12,7 +12,7 @@ do banco de dados.
 
 As credenciais para acessar o banco de dados podem ser encontradas no arquivo dbCredentials.txt
 
-Queries pedidas:
+Queries pedidos:
 
 1)Listar todas as vendas (ID) e seus respectivos clientes apenas no ano de 2020:
 
@@ -43,6 +43,5 @@ ORDER BY Ano ASC
 A tabela foi exportada para o arquivo output.csv utilizando o seguinte comando na ferramente PSQL, para a criação do gráfico:
 -c \copy (SELECT date_part('year', data) AS Ano, date_part('quarter', data) AS Trimestre, SUM(valor) AS TotalSales FROM public."Vendas" WHERE data > '2017-01-01' GROUP BY date_part('year', data), date_part('quarter', data)ORDER BY Ano ASC) To 'D:\git\desafio-sql\output.csv' DELIMITER ';' CSV  HEADER
 
-O gráfico resultante foi o output.png
-
+O gráfico resultante é o output.png
 
