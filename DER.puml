@@ -1,0 +1,41 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "Cliente" as e01 {
+  *cliente_id : text
+}
+
+entity "Venda" as e02 {
+  *id : number
+  --
+  *cliente_id : text
+  *tipo : text
+  *data : date
+  *categoria : text
+  *vendedor_id : text
+  *regional : text
+  *duração : number
+  *equipe_id : text
+  *valor : number
+}
+
+entity "Vendedor" as e03 {
+  *vendedor_id : text
+  --
+  *equipe_id : text
+}
+
+entity "Equipe" as e04 {
+  *equipe_id : text
+}
+
+e01 ||..|{ e02
+e02 }o..|| e03
+e04 ||..|{ e03
+
+@enduml
