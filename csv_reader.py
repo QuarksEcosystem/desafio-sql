@@ -9,7 +9,7 @@ def main(argv):
 
     #Cria a tabela auxiliar com o os vendedores e totais de venda ordenados de maior para menor
     s = sort_dict(salesman_dict(filename))
-    #print_salesman_table(s)
+    print_salesman_table(s)
     create_auxiliar_table(s)
 
     #Imprime cliente compra mais cara e da mais barata
@@ -21,6 +21,7 @@ def main(argv):
     #Total de vendas por clientes
     total_sales_per_client(filename)
 
+#devolve um dictionary com os vendedores como chave e os valores totais vendidos como valor
 def salesman_dict(filename):
     input_file = csv.DictReader(open(filename, encoding='utf-8-sig'), delimiter=";")
     salesman = {}
@@ -31,6 +32,7 @@ def salesman_dict(filename):
             salesman[row['Vendedor']] += locale.atof(row['Valor'].strip(" R$"))
     return salesman
 
+#imprime todos os vendedores e seus respectivos valores totais de venda
 def print_salesman_table(salesman_dict):
     print("{:<15} {:<15}".format('Vendedor','VendasTotais'))
     for s, v in salesman_dict.items():
@@ -48,6 +50,7 @@ def sort_dict(dict):
                 break
     return sorted_dict
 
+#imprime os clientes da compra mais cara e da compra mais barata
 def minMaxClient(filename):
     input_file = csv.DictReader(open(filename, encoding='utf-8-sig'), delimiter=";")
     minClient = ""
@@ -64,7 +67,8 @@ def minMaxClient(filename):
             minClient = row['Cliente']
     print(maxClient, "foi responsável pela maior compra") 
     print(minClient, "foi responsável pela menor compra.\n")
-        
+
+#Imprime o valor médio de cada tipo de venda        
 def print_sales_mean(filename):
     input_file = csv.DictReader(open(filename, encoding='utf-8-sig'), delimiter=";")
     # Tipo, quantidade, valor total
@@ -82,6 +86,7 @@ def print_sales_mean(filename):
         print("{:<15} {:<15}".format(k,locale.currency(v/n, grouping=True)))
     print("\n")
 
+#Cria um arquivo .csv com os vendedores por ordem de total arrecadado em vendas
 def create_auxiliar_table(salesman_dict):
     with open('salesman.csv', 'w', newline='') as csvfile:
         fieldnames = ['Vendedor', 'Total de Vendas']
@@ -91,6 +96,7 @@ def create_auxiliar_table(salesman_dict):
         for s, v in salesman_dict.items():
             writer.writerow({'Vendedor': s, 'Total de Vendas': locale.currency(v, grouping=True)})
 
+#Total de vendas por clientes
 def total_sales_per_client(filename):
     input_file = csv.DictReader(open(filename, encoding='utf-8-sig'), delimiter=";")
     # Tipo, quantidade, valor total
