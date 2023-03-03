@@ -1,9 +1,11 @@
 
-Desafio Python:
-Utilização: 
-	O programa foi criado utilizando a IDE Vscode, mas deve ser compatível com qualquer ambiente. Ao iniciá-lo, o programa exibe um menu instando o usuário a escolher as funções que deseja executar. São aceitas letras maiúsculas ou minúsculas. O arquivo csv utilizado é o mesmo fornecido, com apenas uma diferença no nome, e encontra-se anexado à mesma pasta do desafio.
+# Desafio Python:
 
-Parte 1:
+## Utilização: 
+
+O programa foi criado utilizando a IDE Vscode, mas deve ser compatível com qualquer ambiente. Ao iniciá-lo, o programa exibe um menu instando o usuário a escolher as funções que deseja executar. São aceitas letras maiúsculas ou minúsculas. O arquivo csv utilizado é o mesmo fornecido, com apenas uma diferença no nome, e encontra-se anexado à mesma pasta do desafio.
+
+## Parte 1:
 
 Enunciado: Construa uma tabela auxiliar que sumarize o valor vendido por cada vendedor, ordenando do maior para o menor.
 
@@ -26,7 +28,7 @@ Por fim, para gerar a tabela, foi necessário criar um DataFrame que recebesse o
 
 ![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem4.jpg)
 
-Parte 2:
+## Parte 2:
 Enunciado: Imprima e identifica qual foi o cliente responsável pela venda com maior valor e com menor valor;
 
 	Resposta:
@@ -38,7 +40,7 @@ Enunciado: Imprima e identifica qual foi o cliente responsável pela venda com m
 Como as outras, ela cria um leitor de csv e pula a primeira linha do arquivo fornecido. Ela então itera pelo arquivo (deletando a última coluna, criada por um erro de leitura no csv original) e adiciona os clientes e suas respectivas compras numa lista que é organizada do maior para o menor.
 	A função então imprime uma mensagem dizendo qual cliente fez a maior compra singular e seu valor, e qual fez a menor compra e seu valor.
 
-Parte 3:
+## Parte 3:
 	Enunciado: Imprima valor médio por Tipo de venda (Serviços, Licenciamento, Produtos)
 
 Resposta:
@@ -51,7 +53,7 @@ A função mediasTipos(csvfile) cria o dicionário tipos, um collections.Counter
 	A seguir, contaTipo e tipos são organizados alfabeticamente, de modo que as posições dos tipos sejam correspondentes nas duas listas.
 	Por fim, utilizei um for loop para calcular as médias, dividindo os valores totais pelas ocorrências dos tipos e armazenando-as justo aos seus respectivos tipos na lista medias criada anteriormente. Esta lista então é usada para criar o DataFrame que é impresso como resultado da função.
 
-Parte 4:
+## Parte 4:
 Enunciado: Imprima o número de vendas realizada por cliente;
 Resposta:
 	A biblioteca collections foi usada novamente nesta função.
@@ -59,11 +61,11 @@ Resposta:
 ![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem7.jpg)
 
 
-Desafio SQL
+# Desafio SQL
 
 O database manager utilizado foi o PostgreSQL, por questão de familiaridade.
 
-Parte 1: 
+## Parte 1: 
 Enunciado: Construa o modelo de relacionamento com as categorias utilizadas em todos os campos do arquivo CSV (colocar imagem);
 
 Criando o modelo de relacionamento com o arquivo CSV fornecido. Note que para que a coluna “Valor” não seja separada em duas, foi necessário trocar os delimitadores de “,” para “;” no arquivo original.
@@ -71,7 +73,7 @@ A seguir, imagem com a Query utilizada e relação criada:
 
 ![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem8.jpg)
 
-Parte 2:
+## Parte 2:
 Enunciado: Listar todas as vendas (ID) e seus respectivos clientes apenas no ano de 2020
 
 
@@ -81,14 +83,14 @@ Query:
 
 ![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem10.jpg)
 
-Parte 3:
+## Parte 3:
 Enunciado: Listar a equipe de cada vendedor
 
 Query:
 ![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem11.jpg)
 ![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem12.jpg)
 
-Parte 4:
+## Parte 4:
 - Construir uma tabela que avalia trimestralmente o resultado de vendas e plote um gráfico deste histórico.
 
 Tabela:
