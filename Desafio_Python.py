@@ -107,14 +107,14 @@ x = ""
 while input not in ['A','a','B','b','C','c','D','d']:
     x = input("Para visualizar, digite:\nA - Tabela das vendas totais por vendedor\nB - Ver os clientes que fizeram a maior e a menor compra\nC - Média de vendas por tipos\nD - O número de vendas por clientes\nQualquer outra tecla - Sair \n")
     match x:
-        case 'A': vendedoresTotal('BD_Teste.csv')
-        case 'a': vendedoresTotal('BD_Teste.csv')
-        case 'B': maiorMenor('BD_Teste.csv')
-        case 'b': maiorMenor('BD_Teste.csv')
-        case 'C': mediasTipos('BD_Teste.csv')
-        case 'c': mediasTipos('BD_Teste.csv')    
-        case 'D': clienteVendas('BD_Teste.csv')
-        case 'd': clienteVendas('BD_Teste.csv')
+        case 'A': vendedoresTotal('DB_Teste.csv')
+        case 'a': vendedoresTotal('DB_Teste.csv')
+        case 'B': maiorMenor('DB_Teste.csv')
+        case 'b': maiorMenor('DB_Teste.csv')
+        case 'C': mediasTipos('DB_Teste.csv')
+        case 'c': mediasTipos('DB_Teste.csv')    
+        case 'D': clienteVendas('DB_Teste.csv')
+        case 'd': clienteVendas('DB_Teste.csv')
         case _: quit()
 
 
