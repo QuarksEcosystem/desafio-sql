@@ -5,16 +5,15 @@ Utilização:
 
 Parte 1:
 
-Enunciado: Construa uma tabela auxiliar que sumarize o valor vendido por cada vendedor, ordenando do maior para o menor;
+Enunciado: Construa uma tabela auxiliar que sumarize o valor vendido por cada vendedor, ordenando do maior para o menor.
 
 Resposta:
-
 	Observação: para o funcionamento desta função, é necessário importar as bibliotecas csv, pandas e decimal. O csvfile utilizado se encontrava no mesmo diretório que o programa, e se chamava ‘BD_Teste.csv’, e se encontra anexo a este respositório.
 
 	Primeiramente, foi necessário alterar o .csv fornecido, trocando seu delimitador “,” para “;”, pois em seu estado bruto, os valores em reais eram separados dos centavos, o que criaria resultados diferentes dos buscados.
 	Com os ajustes feitos, parti para a criação da função vendedoresTotal(csvfile):
 
-![alt text](https://imgur.com/K5A3gtY)
+![alt text]([https://imgur.com/K5A3gtY](https://github.com/bcatao92/desafio-sql/blob/main/imagem1.jpg))
 
 	A função cria um reader para o arquivo csv e um dicionário, pula a linha do cabeçalho e itera pelo arquivo salvando vendedores como chaves e calculando o total de suas vendas. Para somar os valores, foi necessário criar uma função que transformasse os valores de string para decimal, conforme vemos a seguir:
 
