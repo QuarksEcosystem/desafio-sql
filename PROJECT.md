@@ -3,7 +3,7 @@
 
 ## Utilização: 
 
-O programa foi criado utilizando a IDE Vscode, mas deve ser compatível com qualquer ambiente. Ao iniciá-lo, o programa exibe um menu instando o usuário a escolher as funções que deseja executar. São aceitas letras maiúsculas ou minúsculas. O arquivo csv utilizado é o mesmo fornecido, com apenas uma diferença no nome, e encontra-se anexado à mesma pasta do desafio. Por favor, utilizar os arquivos "BD_Teste.csv" e "Desafio_Python.py".
+O programa foi criado utilizando a IDE Vscode, mas deve ser compatível com qualquer ambiente. Ao iniciá-lo, o programa exibe um menu instando o usuário a escolher as funções que deseja executar. São aceitas letras maiúsculas ou minúsculas. O arquivo csv utilizado é o mesmo fornecido.
 
 ## Parte 1:
 
