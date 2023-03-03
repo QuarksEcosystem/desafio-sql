@@ -105,7 +105,7 @@ def mediasTipos(csvfile):
 
 x = ""
 while input not in ['A','a','B','b','C','c','D','d']:
-    x = input("Para visualizar, digite:\nA - Tabela das vendas totais por vendedor\nB - Ver os clientes que fizeram a maior e a menor compra\nC - Média de vendas por tipos\nD - O número de vendas por clientes\nQualquer outra tecla - Sair ")
+    x = input("Para visualizar, digite:\nA - Tabela das vendas totais por vendedor\nB - Ver os clientes que fizeram a maior e a menor compra\nC - Média de vendas por tipos\nD - O número de vendas por clientes\nQualquer outra tecla - Sair \n")
     match x:
         case 'A': vendedoresTotal('BD_Teste.csv')
         case 'a': vendedoresTotal('BD_Teste.csv')
