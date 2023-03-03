@@ -29,8 +29,8 @@ def auxiliarDicio(dicio):
             else:
                 dicio[line[5]] = stringToDec(line[-1][4:])
 
-def clienteVendas():
-    with open('BD_Teste.csv', 'r') as csv_file:
+def clienteVendas(csvfile):
+    with open(csvfile, 'r') as csv_file:
         csv_reader = csv.reader(csv_file,delimiter=";")    
         
         next(csv_file)
@@ -42,8 +42,8 @@ def clienteVendas():
         print("")
         csv_file.close()
 
-def vendedoresTotal():
-    with open('BD_Teste.csv', 'r') as csv_file:
+def vendedoresTotal(csvfile):
+    with open(csvfile, 'r') as csv_file:
         csv_reader = csv.reader(csv_file,delimiter=";")    
         dicio = dict()
         next(csv_file)
@@ -62,8 +62,8 @@ def vendedoresTotal():
         print("")
         csv_file.close()
 
-def maiorMenor():
-    with open('BD_Teste.csv', 'r') as csv_file:
+def maiorMenor(csvfile):
+    with open(csvfile, 'r') as csv_file:
         csv_reader = csv.reader(csv_file,delimiter=";")    
         clientes = list()
         next(csv_file)
@@ -76,8 +76,8 @@ def maiorMenor():
     print("")
     csv_file.close()
     
-def mediasTipos():
-    with open('BD_Teste.csv', 'r') as csv_file:
+def mediasTipos(csvfile):
+    with open(csvfile, 'r') as csv_file:
         csv_reader = csv.reader(csv_file,delimiter=";")
         tipos = dict()
         contaTipo = collections.Counter() #lista os diferentes tipos
@@ -103,9 +103,14 @@ def mediasTipos():
     print("\n",criaDataFrame(medias,"Tipo","Média"),"\n") 
     csv_file.close()        
 
-vendedoresTotal()   
-maiorMenor()
-mediasTipos()    
-clienteVendas()
+x = ""
+while input not in ['A','a','B','b','C','c','D','d']:
+    x = input("Para visualizar, digite:\nA - Tabela das vendas totais por vendedor\nB - Ver os clientes que fizeram a maior e a menor compra\nC - Média de vendas por tipos\nD - O número de vendas por clientes\nQualquer outra tecla - Sair ")
+    match x:
+        case 'A': vendedoresTotal('BD_Teste.csv')
+        case 'B': maiorMenor('BD_Teste.csv')
+        case 'C': mediasTipos('BD_Teste.csv')    
+        case 'D': clienteVendas('BD_Teste.csv')
+        case _: quit()
 
 
