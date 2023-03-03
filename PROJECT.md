@@ -63,7 +63,7 @@ Resposta:
 
 # Desafio SQL
 
-O database manager utilizado foi o PostgreSQL, por questão de familiaridade.
+O database manager utilizado foi o PostgreSQL, por questão de familiaridade. Os csv's gerados se encontram no respositório.
 
 ## Parte 1: 
 Enunciado: Construa o modelo de relacionamento com as categorias utilizadas em todos os campos do arquivo CSV (colocar imagem);
