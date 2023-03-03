@@ -17,7 +17,7 @@ Resposta:
 
 	A função cria um reader para o arquivo csv e um dicionário, pula a linha do cabeçalho e itera pelo arquivo salvando vendedores como chaves e calculando o total de suas vendas. Para somar os valores, foi necessário criar uma função que transformasse os valores de string para decimal, conforme vemos a seguir:
 
-![alt text](https://imgur.com/8UIVTMa)
+![alt text](https://raw.githubusercontent.com/bcatao92/desafio-sql/main/imagem2.jpg))
 
 	Com o dicionário garantindo que os vendedores tinham suas respectivas somas, faltava ordená-los de acordo como os valores, o que não é possível num dicionário. Para isso criei o sort_dicio, uma lista de tuplas ordenada do maior valor para o menor, e uma lista vazia chamada valores, que receberia os valores tratados novamente como string, para que eu pudesse formatar-los novamente como dinheiro:
 
