@@ -23,7 +23,7 @@ Para resolver o desafio foram utilizadas as seguintes bibliotecas da linguagem p
 
 # Funcionalidades e Demonstração da Aplicação
 
-A demostração e códigos utilizados estão todos no arquivo  **Desafio_SQL.ipynb**.
+A demostração e códigos utilizados estão todos no arquivo  **[Desafio_SQL.ipynb](https://github.com/luanacarlos/desafio-sql/blob/main/Desafio_SQL.ipynb)**.
 
 ## Tecnologias utilizadas, Versões e Sistema Operacional
 
